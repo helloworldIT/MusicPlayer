@@ -1,0 +1,248 @@
+.body{
+    box-sizing: border-box;
+    font-family: 'Young Serif', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,p,span,li{
+    font-family: 'Young Serif', sans-serif;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    background: url(imgs/Background.png) no-repeat fixed center;
+    display: flex;
+    flex-direction: column;
+}   
+
+.heading {
+    width:100vw;
+}
+
+.heading h1{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.app{
+    width: 80vw;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.player-container{
+    width: 62%;
+    height: 500px;
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+    opacity: 0.7;
+}
+
+.playlist-container{
+    width: 35%;
+    height: 500px;
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+    opacity: 0.7;
+}
+
+.add-files{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 10px;
+    position: relative;
+}
+
+.add-files-label{
+    margin-right: 10px;
+}
+
+.clear-list{
+    font-size: 24px;
+    position: absolute;
+    left: 20px;
+    top: 8px;   
+}
+
+.clear-list:hover{
+    color: rgb(255, 57, 57);
+    cursor: pointer;
+}
+
+#sound-file {
+    display: none;
+}
+
+.sound-file-label{
+    padding: 6px 12px;
+    background-color: aqua;
+    display: flex;
+    margin-right: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+#play-list{
+    margin-top: 20px;
+    list-style-type: decimal;
+    padding-left: 30px;
+    padding-right: 20px;
+    position: absolute;
+    left: 15px;
+    right: 5px;
+    bottom: 20px;
+    top: 40px;
+    overflow: auto;
+    scroll-behavior: auto;
+}
+
+.play-list-item{
+    position: relative;
+    padding: 15px ;
+}
+
+.song-name{
+    display: inline-block;
+    width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: absolute;
+    cursor: grab;
+    user-select: none;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.selected-song {
+    font-weight: bolder!important;
+    font-size: 16px;
+    font-style: italic;
+    margin-top: 2px;
+}
+
+.song-name:hover{
+    font-style: italic;
+}
+
+.remove-item{
+    position: absolute;
+    right: 0;
+    bottom: 50%;
+    transform: translateY(40%);
+    cursor: pointer;
+}
+
+.remove-item:hover{
+    color: rgb(255, 57, 57);
+}
+
+#audio-player{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.control-btns{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    bottom: 90px;
+}
+
+.control-btn{
+    margin: 0 10px;
+    font-size: 26px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.control-btn:hover .control-btn-icon {
+    color: aqua;
+}
+
+.play-btn{
+    font-size: 40px;
+    padding: 10px 20px;
+    background: rgba(107, 255, 253, 0.553);
+    border-radius: 50%;
+}
+
+.cd-cover-container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-20%, -100%);
+}
+
+.cd-playlist{
+    display: inline-block;
+    position: relative;
+}
+
+.cd-cover{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: -70px;
+}
+
+.retroCD{
+    width: 150px;
+    height: 150px;
+}
+
+.current-song-name{
+    width: 250%;
+    position: absolute;
+    left: -160px;   
+    bottom: -60px;
+    display: -webkit-box;
+    font-weight: bold;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    text-align: center;
+}
+
+#loop{
+    position: relative;
+}
+
+.is-looped{
+    position: absolute;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    left: 0;
+    right: 0;
+    bottom: 26px;
+    display: none;
+}
+
+#audio-player::-webkit-media-controls-play-button {
+    display: none;
+}
+
+#audio-player::-webkit-media-controls-panel{
+    background-image: linear-gradient(-45deg, #F3A5C9, #A3C1DB , #AFEBBA);
+}
+
+
+

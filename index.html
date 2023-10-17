@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Young+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./assets/imgs/MusicPlayer.webp" type="image/x-icon">
+    <!-- Link css and js -->
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="./scripts/LinkedList.js"></script>
+    <script src="./scripts/script.js" defer></script>
+    <title>Music Player</title>
+
+</head>
+<body>
+<div class="container">
+        <div class="app">
+            <div class="player-container">
+                <div class="cd-cover-container">
+                    <div class="cd-playlist">
+                        <img src="./assets/imgs/playlist background.png" alt="" class="cd-cover">
+                        <img src="./assets/imgs/retroCD.png" alt="" class="retroCD" id="spinCD">
+                    </div>
+                    <span class="current-song-name">
+
+                    </span>
+                </div>
+                <div class="control-btns">
+                    <button id="shuffle" class = "control-btn"><i class="fa-solid fa-shuffle control-btn-icon"></i></button>
+                    <button id="backward-step" class = "control-btn"><i class="fa-solid fa-backward-step control-btn-icon"></i></button>
+                    <button id="backward" class = "control-btn"><i class="fa-solid fa-backward control-btn-icon"></i></button>
+                    <button id="play" class="control-btn play-btn"><i class="fa-solid fa-pause"></i></button>
+                    <button id="forward" class = "control-btn"><i class="fa-solid fa-forward control-btn-icon"></i></button>
+                    <button id="forward-step" class = "control-btn"><i class="fa-solid fa-forward-step control-btn-icon"></i></button>
+                    <button id="loop" class = "control-btn">
+                        <i class="fa-solid fa-repeat control-btn-icon"></i>
+                        <span class="is-looped control-btn-icon">1</span>
+                    </button>
+                </div>
+                <audio controls id="audio-player" controlslist="nodownload nofullscreen">
+                </audio>
+            </div>
+
+            <div class="playlist-container">
+                <div class="add-files">
+                    <i class="fa-solid fa-trash clear-list"></i>
+                    <h3 class="add-files-label">Add Songs</h3>
+                    <div class="add-files-btn">
+                        <form id="upload-form">
+                            <input type="file" id = "sound-file" accept=".mp3, .wav, .ogg" multiple required>
+                            <label for="sound-file" class="sound-file-label">+</label>
+                        </form>
+                    </div>
+                </div>
+
+                <ul id="play-list">
+                    <!-- <li class="play-list-item">
+                        <span class="song-name">
+                            ${song.name}
+                        </span>
+                        <i class="fa-solid fa-trash-can remove-item"></i>!
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
