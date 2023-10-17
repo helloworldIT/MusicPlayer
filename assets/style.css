@@ -54,6 +54,7 @@ h1,h2,h3,h4,h5,h6,p,span,li{
     width: 100%;
     display: flex;
     justify-content: end;
+    -webkit-justify-content: flex-end;
     align-items: center;
     margin-top: 10px;
     position: relative;
